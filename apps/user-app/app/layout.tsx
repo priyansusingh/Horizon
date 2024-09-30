@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google"; // Importing Inter from Google Fonts
 import localFont from "next/font/local";
 import "./globals.css";
-import { Providers } from "../providers";
+import { Providers } from "./providers";
 
 // Importing Inter font from Google Fonts
 const inter = Inter({
