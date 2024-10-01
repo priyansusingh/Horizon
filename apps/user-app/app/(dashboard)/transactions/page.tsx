@@ -1,6 +1,6 @@
 export default function(){
 
     return <div>
-        transaction page
+        Coming Soon...
     </div>
 }
