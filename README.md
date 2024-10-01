@@ -1,81 +1,63 @@
-# Turborepo starter
+# Horizon
 
-This is an official starter Turborepo.
+Horizon is a payment application built using **Turborepo** and **Next.js** that enables seamless money transfers and bank transactions. It includes essential features such as user signup/signin, peer-to-peer (P2P) money transfer, and bank transfers through HDFC and Axis Bank. The app also provides a clear transaction history for users to track their payments.
 
-## Using this example
+## Features
 
-Run the following command:
+- **User Signup/Signin**: Secure authentication system for users to register and log in.
+- **P2P Money Transfer**: Send money instantly to other Horizon users.
+- **Bank Transfers**: Transfer money to and from major banks like HDFC and Axis Bank.
+- **Transaction History**: View a list of your recent transactions, including transfers and payments.
 
-```sh
-npx create-turbo@latest
+## Tech Stack
+
+- **Turborepo**: Monorepo structure for managing multiple packages.
+- **Next.js**: Server-side rendering and React framework for building the web app.
+- **TypeScript**: Static typing to ensure code quality and scalability.
+- **Prisma**: ORM for database management.
+- **PostgreSQL**: Relational database for secure storage of user and transaction data.
+- **Tailwind CSS**: Utility-first CSS framework for responsive design.
+- **Zod**: Schema validation for data inputs.
+- **Axios**: For handling HTTP requests and API calls.
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v16+)
+- [Turborepo](https://turborepo.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+
+### Installation
+
+1. **Clone the repository**:
+
+```bash
+   git clone https://github.com/yourusername/horizon.git
+   cd horizon
+   ```
+
+2. **Install dependencies**:
+```bash
+    npm install
+    ```
+
+3. **Set up the environment variables**:
+
+   ```bash
+   DATABASE_URL=postgresql://user:password@localhost:5432/horizon
+   NEXTAUTH_SECRET=your-secret-key  
+   NEXTAUTH_URL=http://localhost:3000
+   ```
+
+4. **Run database migrations**:
+```bash
+   npx prisma migrate dev
 ```
 
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
+5. **Start the development server**:
+```bash
+   npm run dev
 ```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
