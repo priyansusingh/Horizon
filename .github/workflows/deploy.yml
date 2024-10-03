@@ -24,7 +24,7 @@ jobs:
         context: .
         file: ./docker/DockerFile.user
         push: true
-        tags: priyansusingh/horiozon-cd-workflow:latest
+        tags: priyansusingh/horiozon-cd-workflow
 
     - name: Verify Pushed Image
-      run: docker pull priyansusingh/horiozon-cd-workflow:latest
+      run: docker pull priyansusingh/horiozon-cd-workflow
