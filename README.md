@@ -33,7 +33,6 @@ Make sure you have the following installed:
 ### Installation
 
 1. **Clone the repository**:
-
 ```bash
    git clone https://github.com/yourusername/horizon.git
    cd horizon
@@ -42,10 +41,9 @@ Make sure you have the following installed:
 2. **Install dependencies**:
 ```bash
     npm install
-    ```
+```
 
 3. **Set up the environment variables**:
-
    ```bash
    DATABASE_URL=postgresql://user:password@localhost:5432/horizon
    NEXTAUTH_SECRET=your-secret-key  
